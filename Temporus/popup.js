@@ -1,14 +1,44 @@
+function enviarConfiguracao(tipo){
 
-document.addEventListener("DOMContentLoaded", () => {
+    chrome.tabs.query(
+        {active:true, currentWindow:true},
+        (tabs)=>{
+
+            chrome.tabs.sendMessage(
+                tabs[0].id,
+                {
+                    perfil: tipo
+                }
+            );
+
+        }
+    );
+
+}
 
 
-    const botaoModoEscuro = document.getElementById("darkMode");
+document
+.getElementById("baixaVisao")
+.onclick = () => {
+
+    enviarConfiguracao("baixaVisao");
+
+};
 
 
-    botaoModoEscuro.addEventListener("click", () => {
+document
+.getElementById("dislexia")
+.onclick = () => {
 
-        alert("Botão funcionando!");
+    enviarConfiguracao("dislexia");
 
-    });
+};
 
-});
+
+document
+.getElementById("normal")
+.onclick = () => {
+
+    enviarConfiguracao("normal");
+
+};
