@@ -1,31 +1,315 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 
 <head>
+
+    <meta charset="UTF-8">
+
     <title>Temporus</title>
+
+    <!--
+    Aqui depois podemos trocar pelo CSS definitivo da interface
+    -->
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body>
 
-<h1>Temporus</h1>
 
-<p>Escolha seu perfil visual:</p>
+<!-- ============================
+     CABEÇALHO DO TEMPORUS
+     ============================ -->
 
-<button id="baixaVisao">
-👁 Baixa visão
+<header class="cabecalho">
+
+
+    <!--
+    SUBSTITUIR AQUI PELO ÍCONE/LOGO DO TEMPORUS
+
+    Exemplo:
+    <img src="icons/logo.png">
+    -->
+
+    <div class="logo">
+        TEMPORUS
+    </div>
+
+
+    <p>
+        Assistente de acessibilidade visual
+    </p>
+
+
+</header>
+
+
+
+
+
+<!-- ============================
+     PERFIL DE USUÁRIO
+     ============================ -->
+
+
+<section class="perfil">
+
+
+<h2>
+Escolha seu perfil
+</h2>
+
+
+<!--
+Esses perfis podem depois receber
+inteligência artificial para sugerir
+configurações.
+-->
+
+
+<button class="perfil-btn">
+
+    <!-- ÍCONE BAIXA VISÃO AQUI -->
+
+    👁️
+
+    <span>
+    Baixa visão
+    </span>
+
 </button>
 
-<button id="dislexia">
-📖 Dislexia
+
+
+<button class="perfil-btn">
+
+
+    <!-- ÍCONE DISLEXIA AQUI -->
+
+    📖
+
+
+    <span>
+    Dislexia
+    </span>
+
+
 </button>
 
-<button id="normal">
-🔄 Normal
+
+
+<button class="perfil-btn">
+
+
+    <!-- ÍCONE DALTONISMO AQUI -->
+
+    🎨
+
+
+    <span>
+    Daltonismo
+    </span>
+
+
 </button>
+
+
+
+<button class="perfil-btn">
+
+
+    <!-- ÍCONE PADRÃO AQUI -->
+
+    🔄
+
+
+    <span>
+    Visão normal
+    </span>
+
+
+</button>
+
+
+
+</section>
+
+
+
+
+
+<!-- ============================
+     PERSONALIZAÇÃO MANUAL
+     ============================ -->
+
+
+<section class="personalizacao">
+
+
+<h2>
+Personalizar
+</h2>
+
+
+
+<label>
+Tamanho da fonte
+</label>
+
+
+<div class="controle">
+
+
+<button id="diminuirFonte">
+-
+</button>
+
+
+
+<span id="valorFonte">
+100%
+</span>
+
+
+
+<button id="aumentarFonte">
++
+</button>
+
+
+</div>
+
+
+
+
+
+<label>
+Tema
+</label>
+
+
+<select id="tema">
+
+
+<option>
+Normal
+</option>
+
+
+<option>
+Alto contraste
+</option>
+
+
+<option>
+Modo escuro
+</option>
+
+
+<option>
+Modo amarelo/preto
+</option>
+
+
+</select>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- ============================
+     COMPATIBILIDADE
+     ============================ -->
+
+
+<section class="compatibilidade">
+
+
+<h2>
+Funciona em:
+</h2>
+
+
+<div class="programas">
+
+
+<!--
+FUTUROS ÍCONES:
+
+Word
+Google Docs
+Sites
+PDF
+
+-->
+
+<span>
+📝 Word
+</span>
+
+
+<span>
+📄 Docs
+</span>
+
+
+<span>
+🌐 Web
+</span>
+
+
+<span>
+📕 PDF
+</span>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- ============================
+     RODAPÉ
+     ============================ -->
+
+
+<footer>
+
+
+<p>
+Temporus Beta
+</p>
+
+
+<!--
+Adicionar aqui:
+versão
+equipe
+github
+-->
+
+</footer>
+
+
 
 
 <script src="popup.js"></script>
+
 
 </body>
 
