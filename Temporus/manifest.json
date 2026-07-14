@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Temporus",
+  "version": "1.0",
+  "description": "Extensão para personalização visual e acessibilidade em páginas da web.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}

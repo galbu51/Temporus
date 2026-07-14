@@ -1,0 +1,86 @@
+
+:root{
+
+    --cor-fundo: #ffffff;
+
+    --cor-principal: #4F46E5;
+
+    --cor-texto: #222222;
+
+    --cor-botao: #4F46E5;
+
+    --cor-botao-hover: #4338CA;
+
+}
+
+
+/* ===========================
+   NÃO PRECISA ALTERAR ABAIXO
+=========================== */
+
+body{
+
+    width:300px;
+
+    margin:0;
+
+    padding:20px;
+
+    background:var(--cor-fundo);
+
+    font-family:Arial, Helvetica, sans-serif;
+
+}
+
+
+header{
+
+    text-align:center;
+
+}
+
+
+#logo{
+
+    width:90px;
+
+    margin-bottom:10px;
+
+}
+
+
+h1{
+
+    color:var(--cor-principal);
+
+    margin-bottom:20px;
+
+}
+
+
+button{
+
+    width:100%;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:var(--cor-botao);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+}
+
+
+button:hover{
+
+    background:var(--cor-botao-hover);
+
+}
