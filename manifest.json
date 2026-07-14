@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Temporus - Acessibilidade",
+  "version": "1.0.0",
+  "description": "Extensão de acessibilidade visual: daltonismo, dislexia e baixa visão.",
+  
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Temporus - Acessibilidade"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

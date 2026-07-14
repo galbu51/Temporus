@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temporus</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <h1>TEMPORUS</h1>
+  <p>Acessibilidade Visual</p>
+</header>
+
+<!-- PERFIS -->
+<section class="secao">
+  <h2>Perfis Rápidos</h2>
+  
+  <button id="normalizar" class="perfil-btn">
+    👁️ Visão Normal
+  </button>
+  
+  <button id="baixaVisao" class="perfil-btn">
+    🔍 Baixa Visão
+  </button>
+  
+  <button id="dislexia" class="perfil-btn">
+    📖 Dislexia
+  </button>
+</section>
+
+<!-- CONTROLES MANUAIS -->
+<section class="secao">
+  <h2>Ajustes Manuais</h2>
+
+  <!-- FONTE -->
+  <div class="controle">
+    <label>Tamanho da Fonte</label>
+    <div class="flex-controle">
+      <button id="diminuirFonte" class="btn-pequeno">−</button>
+      <span id="valorFonte" class="valor">100%</span>
+      <button id="aumentarFonte" class="btn-pequeno">+</button>
+    </div>
+    <input type="range" id="fonte" min="50" max="300" value="100" step="10">
+  </div>
+
+  <!-- ESPAÇAMENTO -->
+  <div class="controle">
+    <label>Espaçamento (letras)</label>
+    <div class="flex-valor">
+      <input type="range" id="espacamento" min="0" max="10" value="0" step="1">
+      <span id="valorEspacamento" class="valor">0px</span>
+    </div>
+  </div>
+</section>
+
+<!-- DALTONISMO -->
+<section class="secao">
+  <h2>Daltonismo</h2>
+  
+  <select id="daltonismo">
+    <option value="normal">Sem filtro</option>
+    <option value="protanopia">Protanopia (Vermelho)</option>
+    <option value="deuteranopia">Deuteranopia (Verde)</option>
+    <option value="tritanopia">Tritanopia (Azul)</option>
+  </select>
+</section>
+
+<!-- CONFIGURAÇÕES -->
+<section class="secao">
+  <button id="restaurar" class="btn-restaurar">Restaurar Padrão</button>
+</section>
+
+<script src="popup.js"></script>
+</body>
+</html>
