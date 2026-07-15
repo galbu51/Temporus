@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temporus - Acessibilidade Visual</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <h1>TEMPORUS</h1>
+  <p>Acessibilidade Visual</p>
+</header>
+
+<!-- PERFIS RÁPIDOS -->
+<section class="section">
+  <h2>Perfis Rápidos</h2>
+  <div class="profiles-grid" id="profilesContainer">
+    <!-- Preenchido dinamicamente por popup.js -->
+  </div>
+</section>
+
+<!-- ZOOM / TAMANHO -->
+<section class="section">
+  <h2>Zoom Visual</h2>
+  
+  <div class="control">
+    <label for="zoomRange">Amplificação: <span id="zoomValue">100%</span></label>
+    <div class="slider-container">
+      <button class="btn-small" id="zoomOut">−</button>
+      <input type="range" id="zoomRange" min="50" max="300" value="100" step="10">
+      <button class="btn-small" id="zoomIn">+</button>
+    </div>
+  </div>
+</section>
+
+<!-- ESPAÇAMENTO -->
+<section class="section">
+  <h2>Espaçamento</h2>
+
+  <!-- Altura da linha -->
+  <div class="control">
+    <label for="lineHeightRange">Altura da linha: <span id="lineHeightValue">1.5</span></label>
+    <input type="range" id="lineHeightRange" min="1" max="3" value="1.5" step="0.1">
+  </div>
+
+  <!-- Espaçamento de letras -->
+  <div class="control">
+    <label for="letterSpacingRange">Espaçamento de letras: <span id="letterSpacingValue">0px</span></label>
+    <input type="range" id="letterSpacingRange" min="0" max="10" value="0" step="0.5">
+  </div>
+
+  <!-- Espaçamento de palavras -->
+  <div class="control">
+    <label for="wordSpacingRange">Espaçamento de palavras: <span id="wordSpacingValue">0px</span></label>
+    <input type="range" id="wordSpacingRange" min="0" max="15" value="0" step="0.5">
+  </div>
+</section>
+
+<!-- CORES E FILTROS -->
+<section class="section">
+  <h2>Cores e Filtros</h2>
+
+  <!-- Daltonismo -->
+  <div class="control">
+    <label for="colorBlindType">Tipo de daltonismo:</label>
+    <select id="colorBlindType">
+      <option value="normal">Sem filtro</option>
+      <option value="protanopia">Protanopia (Red-blind)</option>
+      <option value="deuteranopia">Deuteranopia (Green-blind)</option>
+      <option value="tritanopia">Tritanopia (Blue-blind)</option>
+      <option value="achromatopsia">Acromatopsia (Preto e branco)</option>
+    </select>
+  </div>
+
+  <!-- Contraste -->
+  <div class="control">
+    <label for="contrastRange">Contraste: <span id="contrastValue">100%</span></label>
+    <input type="range" id="contrastRange" min="80" max="150" value="100" step="5">
+  </div>
+
+  <!-- Brilho -->
+  <div class="control">
+    <label for="brightnessRange">Brilho: <span id="brightnessValue">100%</span></label>
+    <input type="range" id="brightnessRange" min="50" max="150" value="100" step="5">
+  </div>
+
+  <!-- Saturação -->
+  <div class="control">
+    <label for="saturationRange">Saturação: <span id="saturationValue">100%</span></label>
+    <input type="range" id="saturationRange" min="0" max="150" value="100" step="5">
+  </div>
+</section>
+
+<!-- AÇÕES -->
+<section class="section">
+  <button id="resetBtn" class="btn-reset">Restaurar Padrão</button>
+</section>
+
+<!-- SCRIPTS -->
+<script src="../scripts/config-defaults.js"></script>
+<script src="../scripts/storage-manager.js"></script>
+<script src="popup.js"></script>
+
+</body>
+</html>

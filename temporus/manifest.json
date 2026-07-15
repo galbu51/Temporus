@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Temporus - Acessibilidade Visual",
+  "version": "1.0.0",
+  "version_name": "Beta 1.0.0",
+  "description": "Extensão de acessibilidade visual: zoom, daltonismo, dislexia, espaçamento e muito mais.",
+  
+  "permissions": [
+    "storage",
+    "activeTab",
+    "tabs",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Temporus - Acessibilidade Visual"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": [
+        "scripts/config-defaults.js",
+        "scripts/storage-manager.js",
+        "scripts/css-generator.js",
+        "content/content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ]
+}
